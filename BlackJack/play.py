@@ -10,16 +10,15 @@ def take_bet(chips):
     while True:
 
         try:
-            chips.bet = int(input("how many chips you bet"))
+            chips.bet = int(input("How many chips you bet"))
 
         except ValueError:
-            print("sorry wrong input")
+            print("Sorry wrong input")
 
 
         else:
             if chips.bet > chips.total:
-                print("you are misleading")
-
+                print("You are misleading")
             else:
                 break
 
@@ -35,16 +34,16 @@ def hit(deck,hand):
 
 
 def show_some(player,dealer):
-    print("\nDealer's Hand:")
-    print(" <card hidden>")
+    print("\nDealer's Hand: ")
+    print(" <card hidden> ")
     print('',dealer.cards[1])  
-    print("\nPlayer's Hand:", *player.cards, sep='\n ')
+    print("\nPlayer's Hand: ", *player.cards, sep='\n ')
     
 def show_all(player,dealer):
-    print("\nDealer's Hand:", *dealer.cards, sep='\n ')
-    print("Dealer's Hand =",dealer.value)
-    print("\nPlayer's Hand:", *player.cards, sep='\n ')
-    print("Player's Hand =",player.value)
+    print("\nDealer's Hand: ", *dealer.cards, sep='\n ')
+    print("Dealer's Hand = ",dealer.value)
+    print("\nPlayer's Hand: ", *player.cards, sep='\n ')
+    print("Player's Hand = ",player.value)
 
 
 
@@ -61,7 +60,7 @@ def hit_or_hand(deck,hand):
             hit(deck,hand)
 
         elif x[0].lower() == 's':
-            print("dealer turn")
+            print("dealer turn ")
             playing = False
 
         else:
@@ -165,5 +164,5 @@ while True:
 
 #asking user if want to play
 
-if input("do not want to play more type n") == 'n':
+if input("Do not want to play more type n ") == 'n':
     False
